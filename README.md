@@ -2,20 +2,20 @@
 <table>
   <tr>
     <td colspan="2">
-      <h1>RoV Winrate Calculator</h1>
-      <h2>เว็บคำนวณวินเรท rov</h2>
+      <h1>Máy Tính Tỉ Lệ Thắng AOV-RoV</h1>
+      <h2>Web Tính Tỉ Lệ Thắng</h2>
     </td>
   </tr>
       <tr>
     <td colspan="2">
       <span style="color:#900">
-        * เป็นโค้ดที่เขียนขึ้นมาแบบเล่น ๆ ถ้าผิดพลาดประการใด</br>แจ้งมาที่ tw : @hamaimaidaew ได้เลยค้าบ </br></br>
+        * Code viết cho vui thôi :v, nếu có sai sót xin thông báo FB: 2im.dangkhoaa. </br></br>
       </span>
     </td>
   </tr>
   <tr>
     <td>
-      Winrate ปัจจุบัน
+      Tỷ lệ thắng hiện tại
     </td>
     <td>
       <input type="text" id="win_now" autocomplete="off"/>
@@ -23,7 +23,7 @@
   </tr>
   <tr>
     <td>
-      Winrate ที่ต้องการ
+      Tỷ lệ thắng mong muốn
     </td>
     <td>
       <input type="text" id="win_need" autocomplete="off"/>
@@ -31,7 +31,7 @@
   </tr>
   <tr>
     <td>
-      จำนวนรอบที่เล่นทั้งหมด
+      Tổng số trận đã chơi
     </td>
     <td>
       <input type="text" id="n" autocomplete="off"/>
