@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-5819384832132568">
+    <title>Dylib 7-color FPS online maker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cr {
+            padding-top: 20px;
+            text-align: right;
+        }
+
+        .fps-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Dylib 7-color FPS online maker</h2>
+        <img src="FPS.jpg" alt="FPS" class="fps-image">
+<hr>
+        <form action="" method="POST" id="fpsForm">
+            <div class="mb-3">
+                                                <label for="fps_label" class="form-label">Enter FPS Text Label You Want:</label>
+                <h6>Number of uses: <b>4403</b></h6>
+                <input type="text" class="form-control" id="fps_label" min="1" max="25" name="fps_label" placeholder="Enter Text You Want">
+            </div>
+            <button type="submit" class="btn btn-primary">Make Now</button>
+            <hr>
+            <p>Donate: MBBank | 9999923052004</p>
+        </form>
+
+        <hr>
+                <div class="card">
+                    <center><h5>History</h5></center>
+            <div class="card-body" id="historyCardBody">
+                
+            </div>
+        </div>
+        
+                <div class="cr">
+            <p>By <a style="text-decoration:none" href="https://t.me/x2nios">X2NIOS</a></p>
+        </div>
+    </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function updateHistory() {
+            $.ajax({
+                url: 'get_history.php',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    $('#historyCardBody').empty();
+
+                    if (data.length > 0) {
+                        var table = '<table class="table table-striped table-bordered"><thead><tr><th>ID</th><th>Text</th></tr></thead><tbody>';
+
+                        for (var i = 0; i < data.length; i++) {
+                            table += '<tr>';
+                            table += '<td>' + data[i].id + '</td>';
+                            table += '<td>' + data[i].text + '</td>';
+                            table += '</tr>';
+                        }
+
+                        table += '</tbody></table>';
+
+                        $('#historyCardBody').append(table);
+                    } else {
+                        $('#historyCardBody').text('Không có dữ liệu.');
+                    }
+                },
+                error: function() {
+                    $('#historyCardBody').text('Có lỗi xảy ra khi lấy dữ liệu.');
+                }
+            });
+        }
+
+        // Cập nhật dữ liệu mỗi 5 giây
+        setInterval(updateHistory, 1000);
+
+        // Thực hiện cập nhật lần đầu
+        updateHistory();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5819384832132568" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
