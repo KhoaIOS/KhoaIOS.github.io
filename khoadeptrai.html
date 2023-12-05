@@ -1,99 +1,94 @@
-<table>
-  <tr>
-    <td colspan="2">
-      <h1>Máy Tính Tỉ Lệ Thắng AOV-RoV</h1>
-      <h2>Web Tính Tỉ Lệ Thắng</h2>
-    </td>
-  </tr>
-      <tr>
-    <td colspan="2">
-      <span style="color:#900">
-        * Code viết cho vui thôi :v, nếu có sai sót xin thông báo FB: 2im.dangkhoaa. </br></br>
-      </span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Tỷ lệ thắng hiện tại
-    </td>
-    <td>
-      <input type="text" id="win_now" autocomplete="off"/>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Tỷ lệ thắng mong muốn
-    </td>
-    <td>
-      <input type="text" id="win_need" autocomplete="off"/>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Tổng số trận đã chơi
-    </td>
-    <td>
-      <input type="text" id="n" autocomplete="off"/>
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="2" style="text-align:center">
-      <br/>
-      <input type="button" value="Calculate" onclick="javascript:calculate()">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <div id="output">&nbsp;</div>
-    </td>
-  </tr>
-</table>
-
-body{
-  font-family:sans-serif;
-  font-size:16px;
-}
-table{
-  margin:0 auto;
-  max-width:400px;
-  
-}
-input{
-  font-size:16px;
-}
-#output{
-  margin-top:16px;
-  text-align:center;
-}
-
-getIntFromString = function(a){
-	if (isNaN(a))
-	{
-		groups = a.match(/([0-9.]+)/);
-		if (groups != null && groups.length > 0){
-			return groups[0];
-		}
-		return 0;
-	}
-	return a;
-}
-
-normaliseGrade = function (win_now, win_need, n){
-  win_now = getIntFromString(win_now)
-  win_need = getIntFromString(win_need)
-  n = getIntFromString(n)
-  n_win = (win_now/100)*n
-  n_need = ((win_need*n)-(100*n_win.toFixed(0)))/(100-win_need)
-  return n_need.toFixed(0);
-}
-
-calculate = function(){
-  participation = document.getElementById("win_now").value;
-  mcq = document.getElementById("win_need").value;
-  course_work = document.getElementById("n").value;
-  score = normaliseGrade(participation,mcq,course_work)
-  output = "<strong> ต้องเล่นให้ชนะติดต่อกันอีก " + score + " ตา</strong>"
-  console.debug(output)
-  document.getElementById("output").innerHTML = output
-}
+<!doctype html>
+<!--[if lte IE 9]>
+<html lang="en" class="oldie">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-param" content="authenticity_token"/>
+        <meta name="csrf-token" content="mCRDqXycEbTdQFcdMBwRdscL0+pnw+zoeQpwck/hl1e1h9gQsDmB/cnGBTNladhnCtC9uE7/cWd323WGPGgMBw=="/>
+        <title>KhoaIOS - Máy tính tỉ lệ thắng aov </title>
+        <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-7d0085e88e3f06095d712efc55f79fc6aedaeed08967649de30e3ea674797898.css"/>
+        <link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/global/global-50d64cc92f6a83db1e6bb7eefa53025eae85d2e0ac5d781899adc0ed3af8f8d1.css"/>
+        <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/packs/css/everypage-9f5f1b6e.css"/>
+        <link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/page/page-d67d8b402666f577e2b63a27d75bd7d44e24919cdaa0c0ef850e7504745c646a.css"/>
+        <link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/editor/editor-fd58a62284b4f2d06087cac60636548a57fa7b6005bfdce9432d38de2591aa89.css"/>
+        <meta name="twitter:title" content="Máy tính tỉ lệ thắng">
+        <meta name="twitter:description" content="...">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://shots.codepen.io/username/pen/RwyRKpq-800.jpg?version=1671332748">
+        <meta property="og:image" content="https://shots.codepen.io/username/pen/RwyRKpq-800.jpg?version=1671332748" itemprop="thumbnailUrl">
+        <meta property="og:title" content="Máy tính tỉ lệ thắng">
+        <meta property="og:url" content="https://codepen.io/oohpattern/details/RwyRKpq">
+        <meta property="og:description" content="...">
+        <link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Foohpattern%2Fpen%2FRwyRKpq&format=json" title="Máy tính tỉ lệ thắng"/>
+        <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png"/>
+        <meta name="apple-mobile-web-app-title" content="CodePen">
+        <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"/>
+        <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111"/>
+    </head>
+    <body class="fullpage logged-out">
+        <header id="main-header" class="main-header"></header>
+        <div class="oldie-header">
+            <a href="https://codepen.io/oohpattern/pen/RwyRKpq?anon=true&amp;view=pen">Edit Pen</a>
+        </div>
+        <div id="result-iframe-wrap" role="main">
+            <iframe id="result" src="https://cdpn.io/oohpattern/fullpage/RwyRKpq?anon=true&amp;view=fullpage" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowTransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe" loading="lazy"></iframe>
+        </div>
+        <div id="pen-ad"></div>
+        <textarea id="init-data" style="display:none">{&quot;__browser &quot;:{&quot;country &quot;:&quot;VN &quot;,&quot;device &quot;:&quot;unknown_device &quot;,&quot;mobile &quot;:false,&quot;name &quot;:&quot;chrome &quot;,&quot;platform &quot;:&quot;pc &quot;,&quot;version &quot;:&quot;119 &quot;},&quot;__constants &quot;:{},&quot;__CPDATA &quot;:{&quot;domain_iframe &quot;:&quot;https://cdpn.io &quot;,&quot;environment &quot;:&quot;production &quot;,&quot;host &quot;:&quot;codepen.io &quot;,&quot;iframe_allow &quot;:&quot;accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share &quot;,&quot;iframe_sandbox &quot;:&quot;allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation &quot;},&quot;__graphql &quot;:{&quot;data &quot;:{&quot;data &quot;:{&quot;sessionUser &quot;:{&quot;id &quot;:&quot;VoDkNZ &quot;,&quot;name &quot;:&quot;Captain Anonymous &quot;,&quot;title &quot;:&quot;Captain Anonymous &quot;,&quot;avatar &quot;:&quot;https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto &amp;version=0 &quot;,&quot;currentContext &quot;:{&quot;id &quot;:&quot;VoDkNZ &quot;,&quot;title &quot;:&quot;Captain Anonymous &quot;,&quot;name &quot;:&quot;Captain Anonymous &quot;,&quot;avatar &quot;:&quot;https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto &amp;version=0 &quot;,&quot;username &quot;:&quot;anon &quot;,&quot;__typename &quot;:&quot;User &quot;},&quot;currentTeamId &quot;:null,&quot;username &quot;:&quot;anon &quot;,&quot;admin &quot;:false,&quot;anon &quot;:true,&quot;pro &quot;:false,&quot;verified &quot;:false,&quot;teams &quot;:[],&quot;__typename &quot;:&quot;User &quot;}}},&quot;url &quot;:&quot;https://codepen.io/graphql &quot;,&quot;api &quot;:&quot;cprails &quot;},&quot;__user &quot;:{&quot;anon &quot;:true,&quot;base_url &quot;:&quot;/anon/&quot;,&quot;cohorts &quot;:[],&quot;current_team_hashid &quot;:null,&quot;current_team_id &quot;:0,&quot;hashid &quot;:&quot;VoDkNZ &quot;,&quot;id &quot;:1,&quot;itemType &quot;:&quot;user &quot;,&quot;name &quot;:&quot;Captain Anonymous &quot;,&quot;paid &quot;:false,&quot;tier &quot;:0,&quot;username &quot;:&quot;anon &quot;,&quot;created_at &quot;:null,&quot;email_verified &quot;:null,&quot;collections_count &quot;:0,&quot;collections_private_count &quot;:0,&quot;followers_count &quot;:0,&quot;followings_count &quot;:0,&quot;pens_count &quot;:0,&quot;pens_private_count &quot;:0,&quot;projects_count &quot;:0,&quot;projects_private_count &quot;:0},&quot;__firebase &quot;:{&quot;config &quot;:{&quot;apiKey &quot;:&quot;AIzaSyBgLAe7N_MdFpuVofMkcQLGwwhUu5tuxls &quot;,&quot;authDomain &quot;:&quot;codepen-store-production.firebaseapp.com &quot;,&quot;databaseURL &quot;:&quot;https://codepen-store-production.firebaseio.com &quot;,&quot;disabled &quot;:false,&quot;projectId &quot;:&quot;codepen-store-production &quot;},&quot;token &quot;:&quot;eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImNsYWltcyI6eyJvd25lcklkIjoiVm9Ea05aIiwiYWRtaW4iOmZhbHNlfSwiZXhwIjoxNzAxNzkwMjc4LCJpYXQiOjE3MDE3ODY2NzgsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInN1YiI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6IlZvRGtOWiJ9.pW0VuTpyTFlHoW0RUR9YxoGzEFV1_D_QWv30d8N-DHBc462gQCuNWGHknEx0dKemcpRTekQvgjEtdUbZ0IiehDXmXgVoYvfZePbLTEqqBS58zz0JWFv4jgCohEaFBre5ii87uVg1CWZU2PpqBhMCuWJL5w5W9QY7qyEv1CO1bBqe132hFyOM00YOKPrd1DLnaSUZJ8F3wDAbEv6Pjm-GsFetrveztMWxlcvPNLNybMiJE2pmLpUnwVuaKfkOceSVZwqqy5RsTI8ZQQiMQ5KNQUfFgB7izHNxOLx3FlHvwLQ_tsIdxFx6wjwQdHmc56tapVDR6XZSlawry2YJOgKy1Q &quot;},&quot;__pay_stripe_public_key &quot;:&quot;pk_live_2GndomDfiklqpSNQn8FrGuwZSMIMzha7DkLJqlYe7IR0ihKAlKdiHg68JJc5eVPt68rzAjzAAVXcUwjySHRCsgjQQ00gtRBUFNH &quot;,&quot;__pay_braintree_env &quot;:&quot;production &quot;,&quot;__item &quot;:&quot;{\&quot;id\&quot;:63116650,\&quot;hashid\&quot;:\&quot;RwyRKpq\&quot;,\&quot;itemType\&quot;:\&quot;pen\&quot;,\&quot;user_id\&quot;:5516698,\&quot;slug_hash\&quot;:\&quot;RwyRKpq\&quot;,\&quot;private\&quot;:false,\&quot;slug_hash_private\&quot;:\&quot;b99cf39ae425ae8c56e758e775f34bd3\&quot;}&quot;,&quot;__profiled &quot;:{&quot;base_url &quot;:&quot;/oohpattern &quot;,&quot;hashid &quot;:&quot;yyEPkq &quot;,&quot;id &quot;:5516698,&quot;name &quot;:&quot;Pattern &quot;,&quot;type &quot;:&quot;user &quot;,&quot;username &quot;:&quot;oohpattern &quot;},&quot;__pageType &quot;:&quot;full &quot;}</textarea>
+        <div id="popup-overlay" class="overlay popup-overlay"></div>
+        <div id="modal-overlay" class="overlay modal-overlay"></div>
+        <script src="https://cpwebassets.codepen.io/assets/common/everypage-b1fe1ca71dab80c49b8e5ebed21506a80cb6fe64ecaa8c6dddae5aca7b1e34d7.js"></script>
+        <script src="https://cpwebassets.codepen.io/assets/packs/js/vendor-1f30f3f8d48bc88a59ff.chunk.js"></script>
+        <script src="https://cpwebassets.codepen.io/assets/packs/js/1-6f40b01bea708d382901.chunk.js"></script>
+        <script src="https://cpwebassets.codepen.io/assets/packs/js/referrer-tracking-645ee6670499a3dc6de1.js"></script>
+        <script src="https://cpwebassets.codepen.io/assets/packs/js/vendor-1f30f3f8d48bc88a59ff.chunk.js"></script>
+        <script src="https://cpwebassets.codepen.io/assets/packs/js/1-6f40b01bea708d382901.chunk.js"></script>
+        <script src="https://cpwebassets.codepen.io/assets/packs/js/everypage-17ddcc687535c8af46d1.js"></script>
+        <script src="https://cpwebassets.codepen.io/assets/editor/full/full_page_renderer-0e557a52193e870c6c772cd23c108c8eecac89b2bdd1f4fd9468517912beb9b2.js"></script>
+        <script nonce="lt76bz7tcRE=">
+            (function() {
+                var js = "window['__CF$cv$params']={r:'830cfdf048b80986',t:'MTcwMTc4NjY3OC42NjIwMDA='};_cpo=document.createElement('script');_cpo.nonce='lt76bz7tcRE=',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";
+                var _0xh = document.createElement('iframe');
+                _0xh.height = 1;
+                _0xh.width = 1;
+                _0xh.style.position = 'absolute';
+                _0xh.style.top = 0;
+                _0xh.style.left = 0;
+                _0xh.style.border = 'none';
+                _0xh.style.visibility = 'hidden';
+                document.body.appendChild(_0xh);
+                function handler() {
+                    var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+                    if (_0xi) {
+                        var _0xj = _0xi.createElement('script');
+                        _0xj.nonce = 'lt76bz7tcRE=';
+                        _0xj.innerHTML = js;
+                        _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+                    }
+                }
+                if (document.readyState !== 'loading') {
+                    handler();
+                } else if (window.addEventListener) {
+                    document.addEventListener('DOMContentLoaded', handler);
+                } else {
+                    var prev = document.onreadystatechange || function() {}
+                    ;
+                    document.onreadystatechange = function(e) {
+                        prev(e);
+                        if (document.readyState !== 'loading') {
+                            document.onreadystatechange = prev;
+                            handler();
+                        }
+                    }
+                    ;
+                }
+            }
+            )();
+        </script>
+    </body>
+</html>
