@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="vi" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="./assets/" data-template="horizontal-menu-template-starter">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Fakebill - Ngân Hàng MBBank</title>
+    <meta name="title" content="Fakebill - Ngân Hàng MBBank" />
+    <meta name="description" content="vuhoanglan.live - Trang fake bill MBBank chuyển khoản miễn phí" />
+    <meta name="author" content="Vũ Văn Kiên" />
+    <link rel="canonical" href="vuhoanglan.live"/>
+    <meta property="og:title" content="Fakebill - Ngân Hàng MBBank" />
+    <meta property="og:description" content="vuhoanglan.live - Trang fake bill MBBank chuyển khoản miễn phí" />
+    <meta property="og:image" content="https://i.imgur.net/U3dfbWY.png" />
+    <meta name="keywords" content="dichvuvn.net, dichvuvn.net, fakebill dichvuvn.net, fakebill ngân hàng, dichvuvn fakebill, vuvanken. net, website fake bill">
+    <link rel="shortcut icon" href="https://abctech.vn/wp-content/uploads/2017/06/logo-nen-xanh.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/vendor/fonts/materialdesignicons.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="./assets/css/demo.css?104402" />
+    <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <script src="./assets/vendor/js/helpers.js"></script>
+    <script src="./assets/vendor/js/template-customizer.js"></script>
+    <script src="./assets/js/config.js?2bf5ba"></script>
+    <link rel="stylesheet" href="./assets/vendor/libs/toastr/toastr.css" />
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+  <style>body{user-select:none;}</style>  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-navbar-full layout-horizontal layout-without-menu">
+    <div class="layout-container">
+      <!-- Navbar -->
+      <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
+        <div class="container-xxl">
+          <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
+            <a href="./" class="app-brand-link gap-2">
+              <span class="app-brand-logo demo">
+                <span style="color: var(--bs-primary)">
+                  <svg width="268" height="150" viewBox="0 0 38 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.0944 2.22569C29.0511 0.444187 26.7508 -0.172113 24.9566 0.849138C23.1623 1.87039 22.5536 4.14247 23.5969 5.92397L30.5368 17.7743C31.5801 19.5558 33.8804 20.1721 35.6746 19.1509C37.4689 18.1296 38.0776 15.8575 37.0343 14.076L30.0944 2.22569Z" fill="currentColor" />
+                    <path d="M30.171 2.22569C29.1277 0.444187 26.8274 -0.172113 25.0332 0.849138C23.2389 1.87039 22.6302 4.14247 23.6735 5.92397L30.6134 17.7743C31.6567 19.5558 33.957 20.1721 35.7512 19.1509C37.5455 18.1296 38.1542 15.8575 37.1109 14.076L30.171 2.22569Z" fill="url(#paint0_linear_2989_100980)" fill-opacity="0.4" />
+                    <path d="M22.9676 2.22569C24.0109 0.444187 26.3112 -0.172113 28.1054 0.849138C29.8996 1.87039 30.5084 4.14247 29.4651 5.92397L22.5251 17.7743C21.4818 19.5558 19.1816 20.1721 17.3873 19.1509C15.5931 18.1296 14.9843 15.8575 16.0276 14.076L22.9676 2.22569Z" fill="currentColor" />
+                    <path d="M14.9558 2.22569C13.9125 0.444187 11.6122 -0.172113 9.818 0.849138C8.02377 1.87039 7.41502 4.14247 8.45833 5.92397L15.3983 17.7743C16.4416 19.5558 18.7418 20.1721 20.5361 19.1509C22.3303 18.1296 22.9391 15.8575 21.8958 14.076L14.9558 2.22569Z" fill="currentColor" />
+                    <path d="M14.9558 2.22569C13.9125 0.444187 11.6122 -0.172113 9.818 0.849138C8.02377 1.87039 7.41502 4.14247 8.45833 5.92397L15.3983 17.7743C16.4416 19.5558 18.7418 20.1721 20.5361 19.1509C22.3303 18.1296 22.9391 15.8575 21.8958 14.076L14.9558 2.22569Z" fill="url(#paint1_linear_2989_100980)" fill-opacity="0.4" />
+                    <path d="M7.82901 2.22569C8.87231 0.444187 11.1726 -0.172113 12.9668 0.849138C14.7611 1.87039 15.3698 4.14247 14.3265 5.92397L7.38656 17.7743C6.34325 19.5558 4.04298 20.1721 2.24875 19.1509C0.454514 18.1296 -0.154233 15.8575 0.88907 14.076L7.82901 2.22569Z" fill="currentColor" />
+                    <defs>
+                      <linearGradient id="paint0_linear_2989_100980" x1="5.36642" y1="0.849138" x2="10.532" y2="24.104" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-opacity="1" />
+                        <stop offset="1" stop-opacity="0" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_2989_100980" x1="5.19475" y1="0.849139" x2="10.3357" y2="24.1155" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-opacity="1" />
+                        <stop offset="1" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold">VUHOANGLAN.LIVE</span>
+            </a>
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
+              <i class="mdi mdi-close align-middle"></i>
+            </a>
+          </div>
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="mdi mdi-menu mdi-24px"></i>
+            </a>
+          </div>
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <!-- Language -->
+              <li class="nav-item dropdown-language dropdown me-1 me-xl-0">
+                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="./" data-bs-toggle="dropdown">
+                  <i onclick="window.location.href='./';" class="mdi mdi-home mdi-24px"></i>
+                </a>
+              </li>
+              <!--/ Language -->
+              <!-- Style Switcher -->
+              <li class="nav-item dropdown-style-switcher dropdown me-1 me-xl-0">
+                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <i class="mdi mdi-24px"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+                      <span class="align-middle">
+                        <i class="mdi mdi-weather-sunny me-2"></i>Light </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+                      <span class="align-middle">
+                        <i class="mdi mdi-weather-night me-2"></i>Dark </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+                      <span class="align-middle">
+                        <i class="mdi mdi-monitor me-2"></i>System </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- / Style Switcher-->    
+            </ul>
+          </div>
+          <!-- Search Small Screens -->
+          <div class="navbar-search-wrapper search-input-wrapper container-xxl d-none">
+            <input type="text" class="form-control search-input border-0" placeholder="Search..." aria-label="Search..." />
+            <i class="mdi mdi-close search-toggler cursor-pointer"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="layout-page">
+        <div class="content-wrapper">
+          <aside id="layout-menu" class="layout-menu-horizontal menu-horizontal menu bg-menu-theme flex-grow-0">
+            <div class="container-xxl d-flex h-100">
+              <ul class="menu-inner">
+                <!-- Dashboards -->
+                <li class="menu-item">
+                  <a href="./" class="menu-link">
+                    <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
+                    <div data-i18n="Home Page">Trang chủ</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="./fake-bill" class="menu-link">
+                    <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
+                    <div data-i18n="Topup">Fake bill </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!-- / Menu -->
+          <div class="modal fade" id="modalLong" tabindex="-1" aria-labelledby="modalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalLongTitle">Bảng giá</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="nav-align-top">
+                    <ul class="nav nav-pills mb-3" role="tablist">
+                      <li class="nav-item">
+                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-home" aria-controls="navs-pills-top-home" aria-selected="true">Fake Bill</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="navs-pills-top-home" role="tabpanel">
+                        <div class="table-responsive text-nowrap mt-4">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Bank</th>
+                                <th>Giá tiền</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>SHB</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>PVcombank</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>Momo</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>TPBank</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>MBBank</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>Techcombank</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>Agribank</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>Seabank</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>Vietinbank</td>
+                                <td>free/bill</td>
+                              </tr>
+                              <tr>
+                                <td>Vietcombank</td>
+                                <td>free/bill</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br /><div class="container-xxl flex-grow-1 container-p-y">
+  <div class="card" style="max-width: 1000px; margin: auto;">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <li class="d-flex mb-4 pb-1">
+            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+              <div class="me-2">
+              <h6 class="mb-0">Fake Bill Chuyển Tiền: <b style="color:#00e3cc;">MB Bank</b>
+                </h6>
+              </div>
+            </div>
+          </li>
+          <form id="td-mbbank" method="POST">
+            <input name="forbank" value="mbbank" hidden="">
+            <div id="namegui" class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Tên của bạn</label>
+              <div class="col-sm-9">
+                <input type="text" id="name_gui" name="name_gui" class="form-control" required placeholder="Tên người chuyển">
+              </div>
+            </div>
+            <div id="stkgui" class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">STK của bạn</label>
+              <div class="col-sm-9">
+                <input type="text" id="stk_gui" name="stk_gui" class="form-control" required placeholder="Số tài khoản người chuyển">
+              </div>
+            </div>
+            <div id="bank1" class="row mb-3">
+            <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Tên ngân hàng người nhận</label>
+              <div class="col-sm-9">
+                <select required="" id="bank" name="bank" class="form-control" onchange="chonBank()">
+                  <option ant="VietinBank" int="ICB" value="Ngân hàng VietinBank">VietinBank</option>
+                  <option ant="Vietcombank" int="VCB" value="Ngân hàng Vietcombank">Vietcombank</option>
+                  <option ant="BIDV" int="BIDV" value="Ngân hàng BIDV">BIDV</option>
+                  <option ant="Agribank" int="VBA" value="Ngân hàng Agribank">Agribank</option>
+                  <option ant="OCB" int="OCB" value="Ngân hàng OCB">OCB</option>
+                  <option ant="MBBank" int="MB" value="Ngân hàng TMCP Quân đội">MBBank</option>
+                  <option ant="Techcombank" int="TCB" value="Ngân hàng Techcombank">Techcombank</option>
+                  <option ant="ACB" int="ACB" value="Ngân hàng TMCP Á Châu">ACB</option>
+                  <option ant="VPBank" int="VPB" value="Ngân hàng VPBank">VPBank</option>
+                  <option ant="TPBank" int="TPB" value="Ngân hàng TMCP Tiên Phong">TPBank</option>
+                  <option ant="Sacombank" int="STB" value="Ngân hàng Sacombank">Sacombank</option>
+                  <option ant="HDBank" int="HDB" value="Ngân hàng HDBank">HDBank</option>
+                  <option ant="VietCapitalBank" int="VCCB" value="Ngân hàng TMCP Bản Việt">VietCapitalBank</option>
+                  <option ant="SCB" int="SCB" value="Ngân hàng TMCP Sài Gòn">SCB</option>
+                  <option ant="VIB" int="VIB" value="Ngân hàng TMCP Quốc tế Việt Nam">VIB</option>
+                  <option ant="SHB" int="SHB" value="Ngân hàng SHB">SHB</option>
+                  <option ant="Eximbank" int="EIB" value="Ngân hàng Eximbank">Eximbank</option>
+                  <option ant="MSB" int="MSB" value="Ngân hàng TMCP Hàng Hải">MSB</option>
+                  <option ant="CAKE" int="CAKE" value="Ngân hàng số CAKE by VPBank">CAKE</option>
+                  <option ant="Ubank" int="Ubank" value="Ngân hàng số Ubank by VPBank">Ubank</option>
+                  <option ant="Timo" int="TIMO" value="Ngân hàng số Timo">Timo</option>
+                  <option ant="ViettelMoney" int="VTLMONEY" value="Tổng Công ty Dịch vụ số Viettel">ViettelMoney</option>
+                  <option ant="VNPTMoney" int="VNPTMONEY" value="VNPT Money">VNPTMoney</option>
+                  <option ant="SaigonBank" int="SGICB" value="Ngân hàng SaigonBank">SaigonBank</option>
+                  <option ant="BacABank" int="BAB" value="Ngân hàng TMCP Bắc Á">BacABank</option>
+                  <option ant="PVcomBank" int="PVCB" value="Ngân hàng PVcomBank">PVcomBank</option>
+                  <option ant="Oceanbank" int="Oceanbank" value="Ngân hàng Oceanbank">Oceanbank</option>
+                  <option ant="NCB" int="NCB" value="Ngân hàng TMCP Quốc Dân">NCB</option>
+                  <option ant="ShinhanBank" int="SHBVN" value="Ngân hàng ShinhanBank">ShinhanBank</option>
+                  <option ant="ABBANK" int="ABB" value="Ngân hàng TMCP An Bình">ABBANK</option>
+                  <option ant="VietABank" int="VAB" value="Ngân hàng TMCP Việt Á">VietABank</option>
+                  <option ant="NamABank" int="NAB" value="Ngân hàng TMCP Nam Á">NamABank</option>
+                  <option ant="PGBank" int="PGB" value="Ngân hàng TMCP Xăng dầu Petrolimex">PGBank</option>
+                  <option ant="VietBank" int="VIETBANK" value="Ngân hàng TMCP Việt Nam Thương Tín">VietBank</option>
+                  <option ant="BaoVietBank" int="BVB" value="Ngân hàng TMCP Bảo Việt">BaoVietBank</option>
+                  <option ant="SeABank" int="SEAB" value="Ngân hàng TMCP Đông Nam Á">SeABank</option>
+                  <option ant="COOPBANK" int="COOPBANK" value="Ngân hàng Hợp tác xã Việt Nam">COOPBANK</option>
+                  <option ant="LienVietPostBank" int="LPB" value="Ngân hàng TMCP Bưu Điện Liên Việt">LienVietPostBank</option>
+                  <option ant="KienLongBank" int="KLB" value="Ngân hàng TMCP Kiên Long">KienLongBank</option>
+                  <option ant="KBank" int="KBank" value="Ngân hàng Đại chúng TNHH Kasikornbank">KBank</option>
+                  <option ant="UnitedOverseas" int="UOB" value="Ngân hàng United Overseas - Chi nhánh TP. Hồ Chí Minh">UnitedOverseas</option>
+                  <option ant="StandardChartered" int="SCVN" value="Ngân hàng TNHH MTV Standard Chartered Bank Việt Nam">StandardChartered</option>
+                  <option ant="PublicBank" int="PBVN" value="Ngân hàng TNHH MTV Public Việt Nam">PublicBank</option>
+                  <option ant="Nonghyup" int="NHB HN" value="Ngân hàng Nonghyup - Chi nhánh Hà Nội">Nonghyup</option>
+                  <option ant="IndovinaBank" int="IVB" value="Ngân hàng TNHH Indovina">IndovinaBank</option>
+                  <option ant="IBKHCM" int="IBK - HCM" value="Ngân hàng IBKHCM">IBKHCM</option>
+                  <option ant="IBKHN" int="IBK - HN" value="Ngân hàng IBKHN">IBKHN</option>
+                  <option ant="VRB" int="VRB" value="Ngân hàng Liên doanh Việt - Nga">VRB</option>
+                  <option ant="Woori" int="WVN" value="Ngân hàng TNHH MTV Woori Việt Nam">Woori</option>
+                  <option ant="KookminHN" int="KBHN" value="Ngân hàng Kookmin - Chi nhánh Hà Nội">KookminHN</option>
+                  <option ant="KookminHCM" int="KBHCM" value="Ngân hàng KookminHCM">KookminHCM</option>
+                  <option ant="HSBC" int="HSBC" value="Ngân hàng TNHH MTV HSBC (Việt Nam)">HSBC</option>
+                  <option ant="HongLeong" int="HLBVN" value="Ngân hàng TNHH MTV Hong Leong Việt Nam">HongLeong</option>
+                  <option ant="GPBank" int="GPB" value="Ngân hàng Thương mại TNHH MTV Dầu Khí Toàn Cầu">GPBank</option>
+                  <option ant="DongABank" int="DOB" value="Ngân hàng TMCP Đông Á">DongABank</option>
+                  <option ant="DBSBank" int="DBS" value="DBS Bank Ltd - Chi nhánh Thành phố Hồ Chí Minh">DBSBank</option>
+                  <option ant="CIMB" int="CIMB" value="Ngân hàng TNHH MTV CIMB Việt Nam">CIMB</option>
+                  <option ant="CBBank" int="CBB" value="Ngân hàng Thương mại TNHH MTV Xây dựng Việt Nam">CBBank</option>
+                  <option ant="Citibank" int="CITIBANK" value="Ngân hàng Citibank, N.A. - Chi nhánh Hà Nội">Citibank</option>
+                  <option ant="KEBHanaHCM" int="KEBHANAHCM" value="Ngân hàng KEB Hana – Chi nhánh Thành phố Hồ Chí Minh">KEBHanaHCM</option>
+                  <option ant="KEBHANAHN" int="KEBHANAHN" value="Ngân hàng KEB Hana – Chi nhánh Hà Nội">KEBHANAHN</option>
+                  <option ant="MAFC" int="MAFC" value="Công ty Tài chính TNHH MTV Mirae Asset (Việt Nam) ">MAFC</option>
+                  <option ant="VBSP" int="VBSP" value="Ngân hàng Chính sách Xã hội">VBSP</option>
+                </select>
+              </div>
+            </div>
+            <script>
+              function chonBank() {
+                var selectElement = document.getElementById("bank");
+                var selectedOption = selectElement.options[selectElement.selectedIndex];
+                var intValues = selectedOption.getAttribute("int");
+                document.getElementById('code').value = intValues;
+                var selectElement = document.getElementById("bank");
+                var selectedOption = selectElement.options[selectElement.selectedIndex];
+                var intValues = selectedOption.getAttribute("ant");
+                document.getElementById('code1').value = intValues;
+              }
+            </script>
+            <input id="code1" value="Vietinbank" name="code1" hidden="">
+            <input id="code" value="ICB" name="code" hidden="">
+            <div class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">STK nhận</label>
+              <div class="col-sm-9">
+                <input type="number" id="stk" name="stk" required="" class="form-control" placeholder="Số tài khoản người nhận">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Tên người nhận</label>
+              <div class="col-sm-9">
+                <input type="text" id="name_nhan" name="name_nhan" required="" class="form-control" placeholder="Tên người nhận">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Số tiền chuyển</label>
+              <div class="col-sm-9">
+                <input type="number" id="amount" name="amount" required="" class="form-control" placeholder="Ví dụ: 100000">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Nội dung chuyển khoản</label>
+              <div class="col-sm-9">
+                <textarea type="text" id="noidung" name="noidung" required class="form-control" placeholder="Nhập nội dung CK"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3" id="magiaodichx">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Mã giao dịch</label>
+              <div class="col-sm-9">
+                <input type="text" id="magiaodich" name="magiaodich" class="form-control" placeholder="Mã giao dịch" value="FT2292129989">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Thời gian chuyển tiền</label>
+              <div class="col-sm-9">
+                <input type="text" id="time1" name="time1" required="" class="form-control" placeholder="Time" value="13:09:44, 24/12/2023">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Hình thức chuyển</label>
+              <div class="col-sm-9">
+                <input type="text" id="hinhthucck" name="hinhthucck" required="" class="form-control" placeholder="Trong MB" value="Trong MB">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-3 col-form-label" for="thanhdieudeptrai">Giờ chuyển khoản</label>
+              <div class="col-sm-9">
+                <input type="text" id="thoigianhientai" name="thoigianhientai" required="" class="form-control" placeholder="Giờ chuyển khoản" value="13:09">
+              </div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary waves-effect waves-light">Tạo bill</button>
+            </div>
+          </form>
+        </div>
+        <div id="creator-success"></div>
+        <div id="download-img"></div>
+        <div id="done-fakebill-td"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('#td-mbbank').submit(function(e) {
+        e.preventDefault();
+        var submitButton = $(this).find('button[type="submit"]');
+        showToastrNotification('info', 'Đang tạo bill, đợi xíu nhen...', 'Thông báo');
+        submitButton.html('Đang fake bill...').prop('disabled', true);
+        var randomDelay = Math.floor(Math.random() * (2000 - 1000 + 1)) + 1000;
+        setTimeout(function() {
+            var formData = $('#td-mbbank').serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'ajax/mb-bank.php',
+                data: formData,
+                success: function(response) {
+                    $('#creator-success').html('');
+                    $('#download-img').html('');
+                    $('#done-fakebill-td').html('');
+                    $('#creator-success').html('<br/><p class="alert alert-success mb-3">Đã tạo ảnh fake-bill thành công!</p>');
+                    $('#download-img').html('<a href="data:image/jpeg;base64,' + response +'" download="DICHVUVN.jpg" class="btn btn-success">Tải Bill Xuống</a><br/><br/>');
+                    var image = $('<img>').attr('src', 'data:image/jpeg;base64,' + response);
+                    $('#done-fakebill-td').append(image);
+                    showToastrNotification('success', 'Tạo thành công', 'Thông báo');
+                    submitButton.html('thành công, nhấn để tạo lại').prop('disabled', false);
+                },
+                error: function(error) {
+                    console.log(error);
+                    showToastrNotification('error', 'Tạo thất bại...', 'Thông báo');
+                    submitButton.html('Tạo bill (miễn phí)').prop('disabled', false);
+                }
+            });
+        }, randomDelay);
+    });
+});
+</script>
+<!-- Core JS -->
+<script src="./assets/vendor/libs/popper/popper.js"></script>
+  <script src="./assets/vendor/js/bootstrap.js"></script>
+  <script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="./assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="./assets/vendor/js/menu.js?3733a1"></script>
+  <script src="./assets/js/main.js?f40623"></script>
+  <script>
+  function showToastrNotification(status, message, title) {
+    var toastrType = status === "success" ? "success" : "error";
+    toastr.options = {
+      positionClass: 'toast-top-right', 
+      closeButton: true,
+      progressBar: true,
+    };
+    toastr[toastrType](message, title);
+  }
+</script>
+  <link rel="stylesheet" href="./assets/vendor/libs/animate-css/animate.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/sweetalert2/sweetalert2.css" />
+  <script src="./assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+  <script src="./assets/vendor/libs/toastr/toastr.js"></script>
+  </body>
+</html>
